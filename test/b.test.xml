@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="application/xml" href="./sample.xsl"?>
+
+<xslbook>
+ <title>Bold</title>
+ <body>
+This sentence contains a <b>bold</b> text.
+ </body>
+
+ <body>
+This sentence contains a <b><value data-src="data/b.data.xml" of="/List/Item"/></b> text.
+ </body>
+
+ <body>
+This sentence contains a <b data-src="data/b.data.xml"><value of="/List/Item[2]"/></b> text.
+ </body>
+
+ <body>
+  <for each="/List" data-src="data/b.data.xml">
+   This sentence contains a <b><value of="Item[3]"/></b> text.
+  </for>
+ </body>
+
+</xslbook>

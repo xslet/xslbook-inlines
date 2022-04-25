@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="application/xml" href="./sample.xsl"?>
+
+<xslbook>
+ <title>Underwave</title>
+ <body>
+This sentence contains a <w>underwave</w> text.
+ </body>
+
+ <body>
+This sentence contains a <w><value data-src="data/w.data.xml" of="/List/Item"/></w> text.
+</body>
+
+<body>
+This sentence contains a <w data-src="data/w.data.xml"><value of="/List/Item[2]"/></w> text.
+</body>
+
+<body>
+<for each="/List" data-src="data/w.data.xml">
+This sentence contains a <w><value of="Item[3]"/></w> text.
+</for>
+</body>
+</xslbook>

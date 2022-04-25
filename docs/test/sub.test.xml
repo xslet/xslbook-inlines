@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="application/xml" href="./sample.xsl"?>
+
+<xslbook>
+ <title>Subscript</title>
+ <body>
+This sentence contains a <sub>subscript</sub> text.
+ </body>
+
+ <body>
+This sentence contains a <sub><value data-src="data/sub.data.xml" of="/List/Item"/></sub> text.
+</body>
+
+<body>
+This sentence contains a <sub data-src="data/sub.data.xml"><value of="/List/Item[2]"/></sub> text.
+</body>
+
+<body>
+<for each="/List" data-src="data/sub.data.xml">
+This sentence contains a <sub><value of="Item[3]"/></sub> text.
+</for>
+</body>
+</xslbook>

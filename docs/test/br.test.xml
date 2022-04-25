@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="application/xml" href="./sample.xsl"?>
+
+<xslbook>
+ <title>Line break</title>
+ <body>
+This sentence contains a <br/>line break.
+ </body>
+</xslbook>
