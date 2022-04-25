@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="application/xml" href="./sample.xsl"?>
+
+<xslbook>
+ <title>Italic</title>
+ <body>
+This sentence contains a <i>italic</i> text.
+ </body>
+
+ <body>
+This sentence contains a <i><value data-src="data/i.data.xml" of="/List/Item"/></i> text.
+ </body>
+
+ <body>
+This sentence contains a <i data-src="data/i.data.xml"><value of="/List/Item[2]"/></i> text.
+ </body>
+
+ <body>
+  <for each="/List" data-src="data/i.data.xml">
+This sentence contains a <i><value of="Item[3]"/></i> text.
+  </for>
+ </body>
+</xslbook>

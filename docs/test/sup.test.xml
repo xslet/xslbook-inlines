@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="application/xml" href="./sample.xsl"?>
+
+<xslbook>
+ <title>Superscript</title>
+ <body>
+This sentence contains a <sup>superscript</sup> text.
+ </body>
+
+ <body>
+This sentence contains a <sup><value data-src="data/sup.data.xml" of="/List/Item"/></sup> text.
+</body>
+
+<body>
+This sentence contains a <sup data-src="data/sup.data.xml"><value of="/List/Item[2]"/></sup> text.
+</body>
+
+<body>
+<for each="/List" data-src="data/sup.data.xml">
+This sentence contains a <sup><value of="Item[3]"/></sup> text.
+</for>
+</body>
+</xslbook>

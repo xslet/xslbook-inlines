@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="application/xml" href="./sample.xsl"?>
+
+<xslbook>
+ <title>Underline</title>
+ <body>
+This sentence contains a <u>underline</u> text.
+ </body>
+
+ <body>
+This sentence contains a <u><value data-src="data/u.data.xml" of="/List/Item"/></u> text.
+</body>
+
+<body>
+This sentence contains a <u data-src="data/u.data.xml"><value of="/List/Item[2]"/></u> text.
+</body>
+
+<body>
+<for each="/List" data-src="data/u.data.xml">
+This sentence contains a <u><value of="Item[3]"/></u> text.
+</for>
+</body>
+</xslbook>

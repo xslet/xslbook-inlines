@@ -3,7 +3,7 @@
 <head>
  <meta charset="utf-8">
  <meta name="viewport" content="width=device-width,initial-scale=1">
- <title>app-name ver0.1</title>
+ <title>xslbook-inlines ver0.1</title>
  <link rel="stylesheet" type="text/css" href="index.css">
  <link rel="icon" type="image/png" href="./images/xslet-logo.png">
 </head>
@@ -12,7 +12,7 @@
   <ul>
    <li><a href="#about">About</a></li>
    <li><a href="#usage">Usage</a></li>
-   <li><a href="./api/app-name.xml">APIs</a></li>
+   <li><a href="./api/xslbook-inlines.xml">APIs</a></li>
    <li><a href="#tests">Tests</a></li>
    <li><a href="#links">Links</a></li>
   </ul>
@@ -21,8 +21,10 @@
 
  <main>
   <header>
-   <h1>app-name <span class="version">Ver 0.1</span></h1>
+   <h1>xslbook-inlines <span class="version">Ver 0.1</span></h1>
    <p>
+A XSL library for xslbook basic inline elements.<br>
+This library provides match templates to display HTML inline elements, e.g. &lt;b&gt;, &lt;i&gt;, and so on.
    </p>
    <p>
 Copyright (C) xslet project.<br>
@@ -32,8 +34,20 @@ MIT License.
 
   <a name="about"></a>
   <section>
-   <h2>About app-name</h2>
+   <h2>About xslbook-inlines</h2>
    <p>
+xslbook-inlines is a XSL library which is one of parts of xslbook.
+This library includes XSLT match templates which displays commonly used HTML inline elements.
+   </p>
+   <p>
+xslbook elements that this library provides are named with single character.
+The reason is that we want to match these elements with HTML elements possibly, and want to reduce amount of typing since these elements are written in texts frequently.
+There are xslbook elements which are not contained in HTML elements.
+These elements are changed CSS styles against these default styles of transformed HTML elements..
+   </p>
+   <p>
+All elements provided by this library supports data operations with elements provided by xslbook-do library.
+All elements can display values of specified nodes in same or another XML file, and can use conditional branchings or repetitions.
    </p>
   </section>
 
@@ -41,14 +55,14 @@ MIT License.
   <section>
    <h2>Usage</h2>
    <p>
-This section explains how to import app-name and call its templates in your XSL application or library.
+This section explains how to import xslbook-inlines and call its templates in your XSL application or library.
    </p>
 
    <section>
-    <h3>Import app-name</h3>
+    <h3>Import xslbook-inlines</h3>
     <p>
-To import app-name.xsl into another XSL file, the following handworks are needed.
-Since app-name depends on some xslet libraries, they are needed to import, too.
+To import xslbook-inlines.xsl into another XSL file, the following handworks are needed.
+Since xslbook-inlines depends on some xslet libraries, they are needed to import, too.
     </p>
     <ol>
      <li>
@@ -65,12 +79,12 @@ Add the namespace declarations of xslbook and xslutil in a XSL file.
      </li>
      <li>
       <p>
-Add a import element of app-name in the XSL file.
+Add a import element of xslbook-inlines in the XSL file.
       </p>
       <div class="code">
 <div> &nbsp; ...</div>
-<div> &nbsp; &lt;!-- dependency XSL files are already imported in app-name.xsl --&gt;</div>
-<div> &nbsp; &lt;xsl:import href="./app-name.xsl"/&gt;
+<div> &nbsp; &lt;!-- dependency XSL files are already imported in xslbook-inlines.xsl --&gt;</div>
+<div> &nbsp; &lt;xsl:import href="./xslbook-inlines.xsl"/&gt;
 <div> &nbsp; ...</div>
       </div>
      </li>
@@ -83,8 +97,8 @@ Add a import element of app-name in the XSL file.
   <section>
    <h2>APIs</h2>
    <p>
-Since app-name is a XSL library, this API document can be generated with <a href="https://github.com/xslet/xsldoc">xsldoc</a>.<br>
-The generated API document is <a href="./api/app-name.xml">here</a>.
+Since xslbook-inlines is a XSL library, this API document can be generated with <a href="https://github.com/xslet/xsldoc">xsldoc</a>.<br>
+The generated API document is <a href="./api/xslbook-inlines.xml">here</a>.
    </p>
   </section>
 
@@ -94,6 +108,18 @@ The generated API document is <a href="./api/app-name.xml">here</a>.
    <p>
 This section provides the result of unit tests and samples of match/named templates written in the API documents.
    </p>
+
+   <h3>Samples</h3>
+   <ul>
+    <li><a href="test/b.test.xml">&lt;b&gt; - Bold</a></li>
+    <li><a href="test/i.test.xml">&lt;i&gt; - Italic</a></li>
+    <li><a href="test/u.test.xml">&lt;u&gt; - Underline</a></li>
+    <li><a href="test/s.test.xml">&lt;s&gt; - Strike through</a></li>
+    <li><a href="test/sup.test.xml">&lt;sup&gt; - Superscript</a></li>
+    <li><a href="test/sub.test.xml">&lt;sub&gt; - Subscript</a></li>
+    <li><a href="test/br.test.xml">&lt;br&gt; - Line break</a></li>
+    <li><a href="test/w.test.xml">&lt;w&gt; - Underwave</a></li>
+   </ul>
   </section>
 
   <a name="links"></a>
@@ -103,7 +129,7 @@ This section provides the result of unit tests and samples of match/named templa
    </p>
    <ul>
     <li>
-<a class="github" href="https://github.com/xslet/app-name">app-name repository on GitHub</a>
+<a class="github" href="https://github.com/xslet/xslbook-inlines">xslbook-inlines repository on GitHub</a>
     </li>
     <li>
 <a class="github" href="https://github.com/xslet/xslbook">xslbook repository on GitHub</a>
@@ -113,7 +139,7 @@ This section provides the result of unit tests and samples of match/named templa
     </li>
    </ul>
    <p>
-app-name depends on following xslet library.
+xslbook-inlines depends on following xslet library.
    </p>
    <ul>
     <li>
@@ -122,7 +148,7 @@ app-name depends on following xslet library.
    </ul>
    <p>
 XSLT and XPath is the specifications specified by W3C.
-app-name uses XSLT version 1.0 and XPath version 1.0 in it because Web browsers support them.
+xslbook-inlines uses XSLT version 1.0 and XPath version 1.0 in it because Web browsers support them.
    </p>
    <ul>
     <li>
@@ -133,7 +159,7 @@ app-name uses XSLT version 1.0 and XPath version 1.0 in it because Web browsers 
     </li>
    </ul>
    <p>
-In addition, app-name uses XSLT version 3.0 and XPath version 3.0 in the build environment.
+In addition, xslbook-inlines uses XSLT version 3.0 and XPath version 3.0 in the build environment.
    </p>
    <ul>
     <li>
@@ -144,7 +170,7 @@ In addition, app-name uses XSLT version 3.0 and XPath version 3.0 in the build e
     </li>
    </ul>
    <p>
-app-name also uses the following application as tools in the build environment.
+xslbook-inlines also uses the following application as tools in the build environment.
    </p>
    <ul>
     <li>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="application/xml" href="./sample.xsl"?>
+
+<xslbook>
+ <title>Strike through</title>
+ <body>
+This sentence contains a <s>strike through</s> text.
+ </body>
+
+ <body>
+This sentence contains a <s><value data-src="data/s.data.xml" of="/List/Item"/></s> text.
+ </body>
+
+ <body>
+This sentence contains a <s data-src="data/s.data.xml"><value of="/List/Item[2]"/></s> text.
+ </body>
+
+ <body>
+  <for each="/List" data-src="data/s.data.xml">
+This sentence contains a <s><value of="Item[3]"/></s> text.
+  </for>
+ </body>
+</xslbook>
