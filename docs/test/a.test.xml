@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="application/xml" href="./sample.xsl"?>
+
+<xslbook>
+ <title>Anchor</title>
+
+ <body>
+This sentence contains an <a href="a.test.xml">anchor</a> text.
+ </body>
+
+ <body>
+This sentence contains an url: <a href="a.test.xml"/>.
+ </body>
+
+ <body>
+This sentence contains an <a><value data-src="data/a.data.xml" of="/List/Item"/></a> text.
+ </body>
+
+ <body>
+This sentence contains an <a data-src="data/a.data.xml"><value of="/List/Item[2]"/></a> text.
+ </body>
+
+ <body>
+  <for each="/List" data-src="data/a.data.xml">
+   This sentence contains an <a><value of="Item[3]"/></a> text.
+  </for>
+ </body>
+
+</xslbook>
