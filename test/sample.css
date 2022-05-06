@@ -34,6 +34,15 @@ u.wavy {
   text-decoration: underline wavy;
 }
 
+code {
+  font-family: Courier, mono-space;
+  color: #555;
+  background-color: #eee;
+  border: solid 1px #999;
+  border-radius: 0.1rem;
+  padding: 0rem 0.1rem;
+}
+
 
 @media screen {
   html {
